@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Breast Cancer Detection</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+
+<body>
+    <div class="z">
+        <div class="result">
+            <span>Made by SYED ALI TAQI</span>
+            <h1>{{prediction}}</h1>
+        </div>
+        <div  class="h1">
+            <h1>Breast Cancer Detection</h1>
+        </div>
+    </div>
+    <form action="/predict" method="post">
+        <div class="box">
+            <div class="x">
+                <div class="y">
+                    <label for="" class="label">Clump Thickness</label><br>
+
+                    <select name="clump_thickness" id="">
+                        <option class="option" disabled selected>Select</option>
+                        {% for i in range(1,11)%}
+                        <option class="option">{{i}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+                <div class="y">
+                    <label for="" class="label">Size Uniformity</label><br>
+                    <select name="size_uniformity" id="">
+                        <option class="option" disabled selected>Select</option>
+                        {% for i in range(1,11)%}
+                        <option class="option">{{i}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+            </div>
+            <div class="x">
+                <div class="y">
+                    <label for="" class="label">Shape Uniformity</label><br>
+                    <select name="shape_uniformity" id="">
+                        <option class="option" disabled selected>Select</option>
+                        {% for i in range(1,11)%}
+                        <option class="option">{{i}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+                <div class="y">
+                    <label for="" class="label">Marginal Adhesion</label><br>
+                    <select name="marginal_adhesion" id="">
+                        <option class="option" disabled selected>Select</option>
+                        {% for i in range(1,11)%}
+                        <option class="option">{{i}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+            </div>
+            <div class="x">
+                <div class="y">
+                    <label for="" class="label">Epithelial Size</label><br>
+                    <select name="epithelial_size" id="">
+                        <option class="option" disabled selected>Select</option>
+                        {% for i in range(1,11)%}
+                        <option class="option">{{i}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+                <div class="y">
+                    <label for="" class="label">Bare Nucleoli </label><br>
+                    <select name="bare_nucleoli" id="">
+                        <option class="option" disabled selected>Select</option>
+                        {% for i in range(1,11)%}
+                        <option class="option">{{i}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+            </div>
+            <div class="x">
+                <div class="y">
+                    <label for="" class="label">Bland Chromatin</label><br>
+                    <select name="bland_chromatin" id="">
+                        <option class="option" disabled selected>Select</option>
+                        {% for i in range(1,11)%}
+                        <option class="option">{{i}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+                <div class="y">
+                    <label for="" class="label">Normal Nucleoli</label><br>
+                    <select name="normal_nucleoli" id="">
+                        <option class="option" disabled selected>Select</option>
+                        {% for i in range(1,11)%}
+                        <option class="option">{{i}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Predict" class="save">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
